@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: pink;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: brown;
+}
+.container {
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 8vmin; /* Adjust size based on screen */
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(163, 230, 230);
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer; /* Makes clickable elements clearer */
+}
+
+.box.O {
+    color: #ff0000; 
+    text-shadow: 2px 2px #aaa;
+}
+
+.box.X {
+    color: rgb(0, 72, 255);
+    text-shadow: 2px 2px #444;
+}
+
+#restart, #exit {
+    margin-top: 25px;
+    font-size: 3vmin;
+    width: 17vmin;
+    height: 7vmin;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    background-color: rgb(243, 63, 63);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart:hover, #exit:hover {
+    background-color: rgb(200, 50, 50);
+}
+
+#msg {
+    font-size: 5vmin;
+}
+  
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+  
+.hide {
+    display: none;
+}
+
+#turn-display {
+    color: brown;
+    font-size: 4vmin;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+    .box {
+        height: 20vmin;
+        width: 20vmin;
+        font-size: 7vmin;
+    }
+    #msg {
+        font-size: 4vmin;
+    }
+    #turn-display {
+        font-size: 3.5vmin;
+    }
+}
